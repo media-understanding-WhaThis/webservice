@@ -1,12 +1,15 @@
-from flask_restful import Resource, Api
-from flask import Flask, request
-from base64 import b64decode
-import uuid
 import logging
 import os
+import uuid
+from base64 import b64decode
 from pathlib import Path
 
-logging.basicConfig(level=logging.DEBUG, filename=os.path.dirname(os.path.realpath(__file__)) + '/debug.log')
+from flask import Flask, request
+from flask_restful import Resource, Api
+
+logging.basicConfig(level=logging.DEBUG,
+                    filename=os.path.dirname(os.path.realpath(__file__)) + '/debug.log',
+                    format='%(asctime)s %(message)s')
 
 app = Flask(__name__)
 api = Api(app)
@@ -40,7 +43,7 @@ class Image(Resource):
         # TODO run neural net
 
         # Cleanup
-        os.remove(file)
+        # os.remove(file)
 
         response_success = {
             'status': 'success',
