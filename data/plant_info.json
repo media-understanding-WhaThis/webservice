@@ -1,0 +1,40 @@
+{
+  "plantInfo": {
+    "rose": {
+      "name": "Rose",
+      "genus": "Rosa",
+      "ancientNameMeaning": "Latin for rose",
+      "size": "5-9 cm bladeren, 5-15 cm hoogte",
+      "origin": "Europe, Asia, North Africa, North America",
+      "possibleColors": "Red, Pink, Orange, White & Purple",
+      "bloom": "Early spring"
+    },
+    "sunflower": {
+      "name": "Sunflower",
+      "genus": "Helianthus",
+      "ancientNameMeaning": "Helios is Greek for sun, and anthos is Greek for flower",
+      "size": "Heel groot",
+      "origin": "North America",
+      "possibleColors": "Yellow & brown",
+      "bloom": "July, august, september"
+    },
+    "daisy": {
+      "name": "Common Daisy",
+      "genus": "Bellis perennis",
+      "ancientNameMeaning": "Bellis is Latin for pretty and perennis is Latin for everlasting",
+      "size": "2-3 cm diameter 2-10 cm hoogte",
+      "origin": "Europe, Asia, North Africa, North America",
+      "possibleColors": "White & yellow, Pink & yellow",
+      "bloom": "Early spring"
+    },
+    "forget-me-not": {
+      "name": "Forget-me-not",
+      "genus": "Myosotis",
+      "ancientNameMeaning": "Greek for mouse's ear",
+      "size": "1 cm diameter",
+      "origin": "Western Eurasia, New Zealand, Americas, Europe",
+      "possibleColors": "Blue, Pink, White, Yellow",
+      "bloom": "Early spring"
+    }
+  }
+}

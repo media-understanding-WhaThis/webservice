@@ -3,13 +3,16 @@ import os
 import uuid
 from base64 import b64decode
 from pathlib import Path
+import json
 
 from flask import Flask, request
 from flask_restful import Resource, Api
 
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.dirname(os.path.realpath(__file__)) + '/debug.log',
-                    format='%(asctime)s %(message)s')
+import torch
+from cnn.pytorch_main import single_prediction
+from cnn.pytorch_main import used_classes
+
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 api = Api(app)
@@ -22,6 +25,8 @@ class HelloWorld(Resource):
 
 class Image(Resource):
     def post(self):
+        plant_info = json.load(open('data/plant_info.json', mode='r'))
+
         # Decode received image
         json_data = request.get_json()
         image_encoded = json_data['image']
@@ -40,17 +45,12 @@ class Image(Resource):
             logging.debug('Saving the image file seems to have failed')
             return {'status': 'failed, image does not seem to be saved'}, 500
 
-        # TODO run neural net
+        name_predicted = 'sunflower'
+        # _, name_predicted = single_prediction(str(path), used_classes())
+        response_success = plant_info['plantInfo'][name_predicted]
 
         # Cleanup
         # os.remove(file)
-
-        response_success = {
-            'status': 'success',
-            'imageId': image_id,
-            'plantName': 'not set',
-            'description': 'plant description'
-        }
 
         return response_success, 200
 
