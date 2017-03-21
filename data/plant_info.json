@@ -10,7 +10,7 @@
       "bloom": "Early spring",
       "funfact1": "For hundreds of years the rose has been widely recognized as a symbol of love, sympathy or sorrow.",
       "funfact2": "The rose can come in all colors although a black rose is not actually black, it is usually a dark red.",
-      "funfact3": "TODO"
+      "funfact3": "One of the oldest fossils of roses discovered in Colorado dates back from 35 million years ago."
 
     },
     "sunflower": {
@@ -20,7 +20,11 @@
       "size": "Heel groot",
       "origin": "North America",
       "possibleColors": "Yellow & brown",
-      "bloom": "July, august, september"
+      "bloom": "July, august, september",
+      "funfact1": "Europe and the USSR produce over 60% of the world's Sunflowers.",
+      "funfact2": "Sunflower is the national flower of Russia.",
+      "funfact3": "According to the 1996 Guiness Book of Records, the tallest Sunflower ever grown measured 7.7 meters."
+      
     },
     "daisy": {
       "name": "Common Daisy",
@@ -29,7 +33,11 @@
       "size": "2-3 cm diameter 2-10 cm hoogte",
       "origin": "Europe, Asia, North Africa, North America",
       "possibleColors": "White & yellow, Pink & yellow",
-      "bloom": "Early spring"
+      "bloom": "Early spring",
+      "funfact1": "Daisy leaves are edible and are high in Vitamin C.",
+      "funfact2": "A daisy is actually two flowers in one.",
+      "funfact3": "Daisies represent purity and innocence."
+
     },
     "forget-me-not": {
       "name": "Forget-me-not",
@@ -39,6 +47,9 @@
       "origin": "Western Eurasia, New Zealand, Americas, Europe",
       "possibleColors": "Blue, Pink, White, Yellow",
       "bloom": "Early spring"
+      "funfact1": "TODO",
+      "funfact2": "TODO",
+      "funfact3": "TODO"
     }
   }
 }
