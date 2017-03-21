@@ -10,7 +10,7 @@ username = 'yorick'
 password = 'mediaunderstanding'
 merged_auth = base64.b64encode((username + ':' + password).encode())
 
-with open('data/test_plant.jpg', 'rb') as f:
+with open('data/test_plant_04.jpg', 'rb') as f:
     encoded_image = base64.b64encode(f.read()).decode()
 
 json_data = {'image': encoded_image}
