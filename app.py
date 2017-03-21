@@ -12,6 +12,8 @@ import torch
 from cnn.pytorch_main import single_prediction
 from cnn.pytorch_main import used_classes
 
+from time import gmtime, strftime
+
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
@@ -34,7 +36,8 @@ class Image(Resource):
 
         # Save incoming image to unique file name
         image_id = str(uuid.uuid1())
-        file = 'images/' + image_id + '.jpg'
+        time = strftime("%Y_%m_%d_%H_%M_%S", gmtime())
+        file = 'images/' + time + '_' + image_id + '.jpg'
         with open(file, 'wb') as f:
             logging.debug('Writing file as {}'.format(file))
             f.write(image)
@@ -45,8 +48,7 @@ class Image(Resource):
             logging.debug('Saving the image file seems to have failed')
             return {'status': 'failed, image does not seem to be saved'}, 500
 
-        name_predicted = 'sunflower'
-        # _, name_predicted = single_prediction(str(path), used_classes())
+        _, name_predicted = single_prediction(str(path), used_classes())
         response_success = plant_info['plantInfo'][name_predicted]
 
         # Cleanup
