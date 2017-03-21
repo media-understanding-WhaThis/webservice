@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a84361ce-5cb7-4510-8e2d-e09cb0d53aa5" name="mu.yrck.nl" url="https://mu.yrck.nl">
+        <fileTransfer host="yrck.nl" port="15210" privateKey="$USER_HOME$/.ssh/server" rootFolder="/var/www/mu.yrck.nl" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="15210" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
